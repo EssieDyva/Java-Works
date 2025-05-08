@@ -26,6 +26,13 @@ public class compito4 {
         System.out.print("Inserisci il numero del mese: ");
         int mese = scanner.nextInt(); // Lettura del mese inserito dall'utente
         // Utilizzo di un'istruzione switch per determinare la stagione in base al mese
+
+        // Controllo se il mese è valido (compreso tra 1 e 12)
+        while (mese < 1 || mese > 12) {
+            System.out.println("Mese non valido");
+            return; // Esce dal programma se il mese non è valido
+        }
+
         switch (mese) {
             case 1: // Gennaio
             case 2: // Febbraio
@@ -50,9 +57,6 @@ public class compito4 {
             case 11: // Novembre
                 System.out.println("Autunno");
                 break;
-
-            default:
-                System.out.println("Mese non valido"); // Messaggio per mese non valido
         }
     }
 }
