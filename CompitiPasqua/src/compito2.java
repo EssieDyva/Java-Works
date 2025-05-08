@@ -13,6 +13,12 @@ public class compito2 {
         System.out.print("Inserisci un numero da 1 a 7: ");
         int giorno = scanner.nextInt(); // Lettura del numero inserito dall'utente
 
+        while (giorno < 1 || giorno > 7) {
+            // Se il numero non è compreso tra 1 e 7, viene stampato un messaggio di errore
+            System.out.println("Numero non valido. Inserisci un numero da 1 a 7:");
+            giorno = scanner.nextInt(); // Richiesta di reinserire il numero
+        }
+
         // Utilizzo di un'istruzione switch per determinare il giorno della settimana
         switch (giorno) {
             case 1:
@@ -50,9 +56,6 @@ public class compito2 {
                 System.out.println("Domenica");
                 break;
                 
-            default:
-                // Se l'utente inserisce un numero non valido, viene mostrato un messaggio di errore
-                System.out.println("Numero non valido. Inserisci un numero da 1 a 7.");
         }
     }
 }
