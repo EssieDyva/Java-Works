@@ -9,8 +9,7 @@ public class esercizioArray2 {
             { "aa", "bb", "cc" },
             { "dd", "ee", "ff" },
             { "gg", "hh", "ii" },
-            { "hg", "hash", "yt" },
-
+            { "hg", "hash", "yt" }
         };
         String[][] matrix2 = {
             { "xx", "yy", "zz" },
