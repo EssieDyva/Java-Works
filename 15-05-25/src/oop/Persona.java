@@ -3,7 +3,7 @@ package oop;
 /**
  * Classe che va a definire le caratteristiche di una persona
  */
-public class Persona {
+public class Persona { // attributi della classe Persona
     private String nome;
     private String cognome;
     private String genere;
@@ -40,5 +40,4 @@ public class Persona {
     public void setSegnoZodiacale(String segnoZodiacale) {
         this.segnoZodiacale = segnoZodiacale;
     }
-
 }
