@@ -14,4 +14,22 @@ public class Studente extends Persona {
         this.numeroAnno = numeroAnno;
     }
     
+    public double getMediaVoti() {
+        return mediaVoti;
+    }
+    public void setMediaVoti(double mediaVoti) {
+        this.mediaVoti = mediaVoti;
+    }
+    public String getClasse() {
+        return classe;
+    }
+    public void setClasse(String classe) {
+        this.classe = classe;
+    }
+    public int getNumeroAnno() {
+        return numeroAnno;
+    }
+    public void setNumeroAnno(int numeroAnno) {
+        this.numeroAnno = numeroAnno;
+    }
 }

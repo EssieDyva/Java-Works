@@ -13,4 +13,23 @@ public class Docente extends Persona {
         this.numeroOreSettimanali = numeroOreSettimanali;
         this.stipendio = stipendio;
     }
+
+    public String getMateria() {
+        return materia;
+    }
+    public void setMateria(String materia) {
+        this.materia = materia;
+    }
+    public int getNumeroOreSettimanali() {
+        return numeroOreSettimanali;
+    }
+    public void setNumeroOreSettimanali(int numeroOreSettimanali) {
+        this.numeroOreSettimanali = numeroOreSettimanali;
+    }
+    public double getStipendio() {
+        return stipendio;
+    }
+    public void setStipendio(double stipendio) {
+        this.stipendio = stipendio;
+    }
 }
