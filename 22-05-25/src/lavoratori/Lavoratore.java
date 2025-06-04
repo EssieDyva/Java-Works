@@ -1,10 +1,10 @@
 package lavoratori;
 
-public class Lavoratore {
-    private String nome;
-    private String cognome;
-    private int stipendio;
-    private String anzianita;
+public abstract class Lavoratore {
+    protected String nome;
+    protected String cognome;
+    protected int stipendio;
+    protected String anzianita;
 
     public Lavoratore() {}
 
