@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: libreria
+
+server:
+  port: 8081
