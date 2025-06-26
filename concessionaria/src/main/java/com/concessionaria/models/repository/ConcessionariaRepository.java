@@ -43,7 +43,7 @@ public class ConcessionariaRepository {
 
         try {
             conn = DriverManager.getConnection(DBConfig.URL, DBConfig.USER, DBConfig.PPW);
-            String query = "INSERT INTO CONCESSIONARIA (NOME_CONCESSIONARIO, CODICE_CONCESSIONARIO, INDIRIZZO)" +
+            String query = "INSERT INTO CONCESSIONARIA (NOME_CONCESSIONARIO, CODICE_CONCESSIONARIO, INDIRIZZO) " +
                            "VALUES(?, ?, ?)";
             comando = conn.prepareStatement(query);
             comando.setString(1, concessionaria.getNomeConcessionario());
@@ -69,8 +69,8 @@ public class ConcessionariaRepository {
 
         try {
             conn = DriverManager.getConnection(DBConfig.URL, DBConfig.USER, DBConfig.PPW);
-            String query = "UPDATE CONCESSIONARIA" +
-                           "SET NOME_CONCESSIONARIO = ?, INDIRIZZO = ?" +
+            String query = "UPDATE CONCESSIONARIA " +
+                           "SET NOME_CONCESSIONARIO = ?, INDIRIZZO = ? " +
                            "WHERE CODICE_CONCESSIONARIO = ?";
             comando = conn.prepareStatement(query);
             comando.setString(1, concessionaria.getNomeConcessionario());

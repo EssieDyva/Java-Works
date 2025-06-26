@@ -71,24 +71,24 @@ public class ClienteRepository {
 
     } //end function
 
-    public static Cliente aggiornaCliente(Cliente cliente) throws SQLException {
+    public static Cliente aggiornaCliente(Cliente cliente, String codiceFiscale) throws SQLException {
         Connection conn = null;
         PreparedStatement comando = null;
-        int righeInserite = 0;
+        int righeAggiornate = 0;
 
         try {
             conn = DriverManager.getConnection(DBConfig.URL, DBConfig.USER, DBConfig.PPW);
-            String query = "UPDATE CLIENTE" +
-                           "SET NOME = ?, COGNOME = ?,NUMERO_TELEFONO = ?, GENERE = ?" +
+            String query = "UPDATE CLIENTE " +
+                           "SET NOME = ?, COGNOME = ?,NUMERO_TELEFONO = ?, GENERE = ? " +
                            "WHERE CODICE_FISCALE = ?";
             comando = conn.prepareStatement(query);
-            comando.setString(2, cliente.getNomeCliente());
-            comando.setString(3, cliente.getCognomeCliente());
-            comando.setString(5, cliente.getNumeroTelefono());
+            comando.setString(1, cliente.getNomeCliente());
+            comando.setString(2, cliente.getCognomeCliente());
+            comando.setString(3, cliente.getNumeroTelefono());
             comando.setString(4, cliente.getGenere());
-            comando.setString(1, cliente.getCodiceFiscale());
+            comando.setString(5, codiceFiscale);
 
-            righeInserite = comando.executeUpdate();
+            righeAggiornate = comando.executeUpdate();
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -99,7 +99,7 @@ public class ClienteRepository {
             if(comando != null)
                 comando.close();
         }
-        return righeInserite > 0 ? cliente : null;
+        return righeAggiornate > 0 ? cliente : null;
     }
 
     public static boolean eliminaCliente(String codiceFiscale) throws SQLException {

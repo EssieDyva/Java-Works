@@ -79,9 +79,9 @@ public class AutoRepository {
 
         try {
             conn = DriverManager.getConnection(DBConfig.URL, DBConfig.USER, DBConfig.PPW);
-            String query = "UPDATE AUTO" +
-                           "SET MODELLO = ?, TARGA = ?, ANNO = ?, TIPO_CARBURANTE = ?, MARCA = ?, NUMERO_PORTE = ?, IBRIDA = ?" +
-                           "WHERE CODICE_MECCANOGRAFICO = ?";
+            String query = "UPDATE AUTO " +
+                           "SET MODELLO = ?, TARGA = ?, ANNO = ?, TIPO_CARBURANTE = ?, MARCA = ?, NUMERO_PORTE = ?, IBRIDA = ? " +
+                           "WHERE CODICE_MECCANOGRAFICO = ? ";
             comando = conn.prepareStatement(query);
             comando.setString(1, auto.getModello());
             comando.setString(2, auto.getTarga());
